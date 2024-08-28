@@ -1,0 +1,8 @@
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+let html_tpl = '<iframe width=426 height=240  src="https://www.youtube.com/embed/[vid]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const video = urlParams.get('v');
+if (video) { var frm = html_tpl.replace(/\[vid\]/g, video); document.write(frm); }
+</script>
